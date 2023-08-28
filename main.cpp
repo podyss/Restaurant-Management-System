@@ -1522,7 +1522,7 @@ void summary() {
 	int page = 0, maxx = 0, choose = 1;
 
 	// 统计菜肴交易信息
-	map< pair< string, string >, pair< int, double > > vount;
+	map< pair< string, string >, pair< double, double > > vount;
 	string time, name;
 	for(auto it = map_check_out.begin(); it != map_check_out.end(); it++) {
 		time = it->second->time;
@@ -1531,7 +1531,7 @@ void summary() {
 		}
 		time.pop_back();
 		name	          = map_dish_sale[it->second->idx_sale]->name;
-		pair< int, double > &temp = vount[{ name, time }];
+		pair< double, double > &temp = vount[{ name, time }];
 		temp.first += map_dish_sale[it->second->idx_sale]->num;
 		temp.second += it->second->sum;
 		vount[{ name, time }] = temp;
