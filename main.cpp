@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include<ftxui/component/component.hpp>
+#include <ftxui/component/component.hpp>
 #include <ftxui/component/screen_interactive.hpp>
 #include <ftxui/dom/elements.hpp>
 #include <ftxui/dom/table.hpp>
@@ -782,7 +782,7 @@ void print() {
 			              text(test) | align_right,
 			          })
 			          | border | size(WIDTH, EQUAL, 80) | center;
-		   } else  {//if(selected == 3)
+		   } else {    // if(selected == 3)
 			   return vbox({
 			              hbox(choose_base->Render() | flex, choose_sale->Render() | flex, choose_pay->Render() | flex),
 			              text("买单信息") | center,
@@ -806,7 +806,7 @@ void print() {
 			          })
 			          | border | size(WIDTH, EQUAL, 80) | center;
 		   }
-        
+
 	   });
 	screen.Loop(renderer);
 }
@@ -1530,7 +1530,7 @@ void summary() {
 			time.pop_back();
 		}
 		time.pop_back();
-		name	          = map_dish_sale[it->second->idx_sale]->name;
+		name	             = map_dish_sale[it->second->idx_sale]->name;
 		pair< double, double > &temp = vount[{ name, time }];
 		temp.first += map_dish_sale[it->second->idx_sale]->num;
 		temp.second += it->second->sum;
