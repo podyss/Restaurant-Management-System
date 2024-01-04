@@ -4,6 +4,7 @@
 #include <ftxui/dom/elements.hpp>
 #include <ftxui/dom/table.hpp>
 #include <windows.h>
+#include<iostream>
 
 using namespace ftxui;
 using namespace std;
